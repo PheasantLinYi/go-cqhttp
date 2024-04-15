@@ -154,8 +154,8 @@ func (c *Caller) call(action string, spec *onebot.Spec, p Getter) global.MSG {
 	case "get_forward_msg":
 		p0 := p.Get("[message_id,id].0").String()
 		return c.bot.CQGetForwardMessage(p0)
-	case "get_friend_list":
-		return c.bot.CQGetFriendList(spec)
+	//case "get_friend_list":
+	//	return c.bot.CQGetFriendList(spec)
 	case "get_group_at_all_remain":
 		p0 := p.Get("group_id").Int()
 		return c.bot.CQGetAtAllRemain(p0)
